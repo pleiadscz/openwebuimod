@@ -1283,9 +1283,7 @@
 
 						<div
 							id="message-input-container"
-							class="flex-1 flex flex-col relative w-full shadow-lg rounded-3xl border {$temporaryChatEnabled
-								? 'border-dashed border-gray-100 dark:border-gray-800 hover:border-gray-200 focus-within:border-gray-200 hover:dark:border-gray-700 focus-within:dark:border-gray-700'
-								: ' border-gray-100/30 dark:border-gray-850/30 hover:border-gray-200 focus-within:border-gray-100 hover:dark:border-gray-800 focus-within:dark:border-gray-800'}  transition px-1 bg-white/5 dark:bg-gray-500/5 backdrop-blur-sm dark:text-gray-100"
+							class="flex-1 flex flex-col relative w-full rounded-full border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 px-2 py-1 shadow-[0_0_40px_rgba(0,0,0,0.04)] dark:shadow-none dark:text-gray-100"
 							dir={$settings?.chatDirection ?? 'auto'}
 						>
 							{#if atSelectedModel !== undefined}
@@ -1606,7 +1604,7 @@
 								</div>
 							</div>
 
-							<div class="flex justify-between items-center mt-0 mb-0 mx-0 max-w-full px-2 py-2" dir="ltr">
+							<div class="flex justify-between items-center mt-0 mb-0 mx-0 max-w-full px-1 py-1.5" dir="ltr">
 								<div class="ml-1 self-end flex items-center flex-1 max-w-[80%]">
 									<InputMenu
 										bind:files
