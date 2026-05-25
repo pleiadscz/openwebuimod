@@ -1410,7 +1410,7 @@
 								</div>
 							{/if}
 
-							<div class="px-2.5">
+							<div class="px-1">
 								<div
 									class="scrollbar-hidden rtl:text-right ltr:text-left bg-transparent dark:text-gray-100 outline-hidden w-full pb-1 px-1 resize-none h-fit max-h-96 overflow-auto {files.length ===
 									0
@@ -1462,7 +1462,7 @@
 															navigator.maxTouchPoints > 0 ||
 															navigator.msMaxTouchPoints > 0
 														)}
-													placeholder={placeholder ? placeholder : $i18n.t('Send a Message')}
+													placeholder={placeholder ? placeholder : 'Zapytaj o cokolwiek'}
 													largeTextAsFile={($settings?.largeTextAsFile ?? false) && !shiftKey}
 													autocomplete={$config?.features?.enable_autocomplete_generation &&
 														($settings?.promptAutocomplete ?? false)}
@@ -1606,7 +1606,7 @@
 								</div>
 							</div>
 
-							<div class=" flex justify-between mt-0.5 mb-2.5 mx-0.5 max-w-full" dir="ltr">
+							<div class="flex justify-between items-center mt-0 mb-0 mx-0 max-w-full px-2 py-2" dir="ltr">
 								<div class="ml-1 self-end flex items-center flex-1 max-w-[80%]">
 									<InputMenu
 										bind:files
@@ -1662,7 +1662,7 @@
 									>
 										<div
 											id="input-menu-button"
-											class="bg-transparent hover:bg-gray-100 text-gray-700 dark:text-white dark:hover:bg-gray-800 rounded-full size-8 flex justify-center items-center outline-hidden focus:outline-hidden"
+											class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
 										>
 											<PlusAlt className="size-5.5" />
 										</div>
@@ -1701,7 +1701,7 @@
 										>
 											<div
 												id="integration-menu-button"
-												class="bg-transparent hover:bg-gray-100 text-gray-700 dark:text-white dark:hover:bg-gray-800 rounded-full size-8 flex justify-center items-center outline-hidden focus:outline-hidden"
+												class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
 											>
 												<Component className="size-4.5" strokeWidth="1.5" />
 											</div>
@@ -1714,7 +1714,7 @@
 												<button
 													type="button"
 													id="model-valves-button"
-													class="bg-transparent hover:bg-gray-100 text-gray-700 dark:text-white dark:hover:bg-gray-800 rounded-full size-8 flex justify-center items-center outline-hidden focus:outline-hidden"
+													class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
 													on:click={() => {
 														selectedValvesType = 'function';
 														selectedValvesItemId = selectedModelIds[0]?.split('.')[0];
@@ -1910,7 +1910,7 @@
 														xmlns="http://www.w3.org/2000/svg"
 														viewBox="0 0 24 24"
 														fill="currentColor"
-														class="size-5"
+														class="h-5 w-5"
 													>
 														<path
 															fill-rule="evenodd"
@@ -1948,7 +1948,7 @@
 												<TerminalMenu bind:show={showTerminalMenu} />
 											{/if}
 
-											{#if $_user?.role === 'admin' || ($_user?.permissions?.chat?.stt ?? true)}
+											{#if false}
 												<!-- {$i18n.t('Record voice')} -->
 												<Tooltip content={$i18n.t('Dictate')}>
 													<button
